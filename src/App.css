@@ -85,3 +85,30 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+.loading-message {
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+  .loading-message {
+    color: #aaa;
+  }
+}
+
+.error-message {
+  padding: 24px;
+  text-align: center;
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .error-message {
+    color: #fee2e2;
+    background-color: #7f1d1d;
+  }
+}

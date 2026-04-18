@@ -34,6 +34,16 @@ function App() {
     }
   };
 
+  const renderContent = () => {
+    if (dbStatus === "loading") {
+      return <div className="loading-message">数据库初始化中...</div>;
+    }
+    if (dbStatus === "error") {
+      return <div className="error-message">数据库初始化失败: {dbError}</div>;
+    }
+    return renderPage();
+  };
+
   return (
     <Layout
       dbStatus={dbStatus}
@@ -41,7 +51,7 @@ function App() {
       currentPage={currentPage}
       onPageChange={setCurrentPage}
     >
-      {renderPage()}
+      {renderContent()}
     </Layout>
   );
 }
