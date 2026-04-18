@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS Playlist (
 CREATE TABLE IF NOT EXISTS PlaylistMap (
   playlistId INTEGER NOT NULL,
   mapKey VARCHAR(16) NOT NULL,
-  order FLOAT NOT NULL,
+  sortOrder FLOAT NOT NULL,
   PRIMARY KEY (playlistId, mapKey),
   FOREIGN KEY (playlistId) REFERENCES Playlist(playlistId) ON DELETE CASCADE,
   FOREIGN KEY (mapKey) REFERENCES Map(key) ON DELETE CASCADE
